@@ -1,0 +1,109 @@
+ux version 2.4.17-uc0 (root@hpclab.cs.tsinghua.edu.cn) (gcc version 2.95.3 20010315 (release)(ColdFi0318 from http://fiddes.net/coldfire/)(-msep-data patches)) #1 Sun Feb 16 21:36:15 HKT 2003
+
+T91M40xxx revision 0
+
+Architecture: EB01
+
+On node 0 totalpages: 1024
+
+zone(0): 0 pages.
+
+zone.
+
+zone(2): 0 pages.
+
+Kernel command line: root=/dev/rom0
+
+Calibrating  13.00 BogoMIPS
+
+Memory: 4MB = 4MB totMemory: 2992KB available (827K code, 163K data, 36K initDentry-cache hash table entries: 512 (order: 0,)
+
+Inode-cache hash table entries: 512 (or: 0, 4096 bytes)
+
+Mount-cache hash table entries: 512 (order: 0, 6 bytes)
+
+Be hash table entries: 1024 (order: 0, 4096 bytes)
+
+s: 1024 (order: 0, 4096 bytes)
+
+POSIX conformance testing by UNIFIX
+
+Linux NET4.0 for Linux 2.4
+
+Based upon Swansea Univeuter Society NET3.039
+
+ink socket
+
+ing kswapd
+
+Atmel USART der version 0.99
+
+ttyS0 at 0xfffd0000 (irq = 2)iltin Atmel APB USART
+
+ttyS1 at 0xfffcc000 (irq = 3)a builtin Atmel APB USART
+
+ slots per queue, batch=16
+
+RAMDISK driver initialize 16 RAM disks of 4096K size 1024 blocksize
+
+Bem copyright 1998,1999 D. Jeff Dionne
+
+Blkmem copyright 1998 Kenneth Albanowski
+
+Blkmem 1 disk iges:
+
+00-145DBFF [VIRTUAL 1400000-145DBFF] (RO)
+
+NET4: Linux TCP/IP 1.0 for NET4.0
+
+P Protocols: ICMP, UDP, TCP
+
+IP: routing cache hash table of 512 buckets, 4Kbyte
+TCP: Hash tables configured (established 512 bind 512)
+
+NET4: Unix domain sockets 1.0/SMP for Linux NET4.0.
+ (romfs filesystem) readonly.
+
+
+Command: hostname GDB-ARMulator
+
+Command: /bin/expand /etc/ramfs.img /dev/ram0
+
+Command: mount -t proc proc /proc
+
+Command: mkdir /var/log
+
+Command: mkdir /var/run
+
+
+Welcome to
+
+          ____ _  _
+
+         /  __| ||_|                 
+
+    _   _| |  | | _ ____  _   _  _  _ 
+
+   | | | | |  | || |  _ \| | | |\ \/ /
+
+   | |_| | |__| || | | | | |_| |/    \
+
+   |  ___\____|_||_|_| |_|\____|\_/\_/
+   | |
+
+   |_|
+
+
+
+GDB/ARMulator support by <davidm@snapgear.com>
+
+For further information check:
+
+http://www.uclinux.org/
+
+
+
+Execution Finished, Exiting
+
+
+Sash command shell (version 1.1.1)

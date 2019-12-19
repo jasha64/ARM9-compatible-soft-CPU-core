@@ -1,0 +1,97 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Thu Sep 19 20:33:01 2019
+| Host         : DESKTOP-280IVRP running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'rom'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of rom from xilinx.com:ip:blk_mem_gen:4.3 to xilinx.com:ip:blk_mem_gen:8.3 (Rev. 1)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+WARNING: The normal upgrade process failed due to validation failures in the given configuration . Attempting partial upgrade.
+This process will attempt to set as many user parameters as possible.Please check the parameters whose values were not applied
+
+WARNING: Unable to set the value 'true' on parameter 'Load Init File' due to the following failure - 
+Validation failed for parameter 'Coe File(Coe_File)' with value 'no_coe_file_loaded' for IP 'rom'. No COE file loaded
+.Restoring to an old valid value of 'false'
+
+WARNING: An attempt to modify the value of disabled parameter 'Coe_File' from 'no_coe_file_loaded' to 'd:/keil/sim_dhry/DHRY.coe' has been ignored for IP 'rom'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  Please consult the warnings from the previous sections, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:ip:blk_mem_gen:8.3 -user_name rom
+set_property -dict "\
+  CONFIG.Additional_Inputs_for_Power_Estimation false \
+  CONFIG.Algorithm Minimum_Area \
+  CONFIG.Assume_Synchronous_Clk true \
+  CONFIG.Byte_Size 9 \
+  CONFIG.Coe_File d:/keil/sim_dhry/DHRY.coe \
+  CONFIG.Collision_Warnings ALL \
+  CONFIG.Component_Name rom \
+  CONFIG.Disable_Collision_Warnings false \
+  CONFIG.Disable_Out_of_Range_Warnings false \
+  CONFIG.ECC false \
+  CONFIG.Enable_A Use_ENA_Pin \
+  CONFIG.Enable_B Use_ENB_Pin \
+  CONFIG.Error_Injection_Type Single_Bit_Error_Injection \
+  CONFIG.Fill_Remaining_Memory_Locations false \
+  CONFIG.Load_Init_File true \
+  CONFIG.Memory_Type True_Dual_Port_RAM \
+  CONFIG.Operating_Mode_A WRITE_FIRST \
+  CONFIG.Operating_Mode_B WRITE_FIRST \
+  CONFIG.Output_Reset_Value_A 0 \
+  CONFIG.Output_Reset_Value_B 0 \
+  CONFIG.Pipeline_Stages 0 \
+  CONFIG.Port_A_Clock 100 \
+  CONFIG.Port_A_Enable_Rate 100 \
+  CONFIG.Port_A_Write_Rate 50 \
+  CONFIG.Port_B_Clock 100 \
+  CONFIG.Port_B_Enable_Rate 100 \
+  CONFIG.Port_B_Write_Rate 50 \
+  CONFIG.Primitive 8kx2 \
+  CONFIG.Read_Width_A 32 \
+  CONFIG.Read_Width_B 32 \
+  CONFIG.Register_PortA_Output_of_Memory_Core false \
+  CONFIG.Register_PortA_Output_of_Memory_Primitives false \
+  CONFIG.Register_PortB_Output_of_Memory_Core false \
+  CONFIG.Register_PortB_Output_of_Memory_Primitives false \
+  CONFIG.Remaining_Memory_Locations 0 \
+  CONFIG.Reset_Memory_Latch_A false \
+  CONFIG.Reset_Memory_Latch_B false \
+  CONFIG.Reset_Priority_A CE \
+  CONFIG.Reset_Priority_B CE \
+  CONFIG.Reset_Type SYNC \
+  CONFIG.Use_Byte_Write_Enable false \
+  CONFIG.Use_Error_Injection_Pins false \
+  CONFIG.Use_REGCEA_Pin false \
+  CONFIG.Use_REGCEB_Pin false \
+  CONFIG.Use_RSTA_Pin false \
+  CONFIG.Use_RSTB_Pin false \
+  CONFIG.Write_Depth_A 8192 \
+  CONFIG.Write_Width_A 32 \
+  CONFIG.Write_Width_B 32 \
+  CONFIG.ecctype No_ECC \
+  CONFIG.register_porta_input_of_softecc false \
+  CONFIG.register_portb_output_of_softecc false \
+  CONFIG.softecc false " [get_ips rom]
+
+

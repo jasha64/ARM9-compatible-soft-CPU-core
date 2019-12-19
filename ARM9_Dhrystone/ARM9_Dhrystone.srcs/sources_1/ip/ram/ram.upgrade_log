@@ -1,0 +1,16 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Thu Sep 19 20:33:27 2019
+| Host         : DESKTOP-280IVRP running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ram'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ram from xilinx.com:ip:blk_mem_gen:4.3 to xilinx.com:ip:blk_mem_gen:8.3 (Rev. 1)
+

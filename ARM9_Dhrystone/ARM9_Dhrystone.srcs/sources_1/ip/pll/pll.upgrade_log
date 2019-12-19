@@ -1,0 +1,255 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Thu Sep 19 20:32:13 2019
+| Host         : DESKTOP-280IVRP running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'pll'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of pll from xilinx.com:ip:clk_wiz:1.8 to xilinx.com:ip:clk_wiz:5.2 (Rev. 1)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+WARNING: An attempt to modify the value of disabled parameter 'MMCM_CLKFBOUT_MULT_F' from '9.125' to '4.000' has been ignored for IP 'pll'
+
+WARNING: An attempt to modify the value of disabled parameter 'MMCM_CLKIN1_PERIOD' from '10.0' to '10.000' has been ignored for IP 'pll'
+
+WARNING: An attempt to modify the value of disabled parameter 'MMCM_CLKIN2_PERIOD' from '10.0' to '10.000' has been ignored for IP 'pll'
+
+WARNING: An attempt to modify the value of disabled parameter 'MMCM_CLKOUT0_DIVIDE_F' from '36.500' to '4.000' has been ignored for IP 'pll'
+
+WARNING: Parameter 'dcm_startup_wait' is no longer present on the upgraded IP 'pll', and cannot be set to 'false'
+
+WARNING: Parameter 'dcm_notes' is no longer present on the upgraded IP 'pll', and cannot be set to 'None'
+
+WARNING: Parameter 'override_dcm' is no longer present on the upgraded IP 'pll', and cannot be set to 'false'
+
+WARNING: Parameter 'dcm_clk_out4_port' is no longer present on the upgraded IP 'pll', and cannot be set to 'CLK0'
+
+WARNING: Parameter 'dcm_clkgen_clk_out2_port' is no longer present on the upgraded IP 'pll', and cannot be set to 'CLKFX'
+
+WARNING: Parameter 'dcm_clk_feedback' is no longer present on the upgraded IP 'pll', and cannot be set to '1X'
+
+WARNING: Parameter 'dcm_clk_out1_port' is no longer present on the upgraded IP 'pll', and cannot be set to 'CLKDV'
+
+WARNING: Parameter 'dcm_clkin_period' is no longer present on the upgraded IP 'pll', and cannot be set to '10.000'
+
+WARNING: Parameter 'dcm_clkgen_clkfx_divide' is no longer present on the upgraded IP 'pll', and cannot be set to '1'
+
+WARNING: Parameter 'dcm_clkdv_divide' is no longer present on the upgraded IP 'pll', and cannot be set to '4.0'
+
+WARNING: Parameter 'dcm_clk_out6_port' is no longer present on the upgraded IP 'pll', and cannot be set to 'CLK0'
+
+WARNING: Parameter 'dcm_clk_out3_port' is no longer present on the upgraded IP 'pll', and cannot be set to 'CLK0'
+
+WARNING: Parameter 'dcm_clkgen_clk_out1_port' is no longer present on the upgraded IP 'pll', and cannot be set to 'CLKFX'
+
+WARNING: Parameter 'dcm_clkgen_spread_spectrum' is no longer present on the upgraded IP 'pll', and cannot be set to 'NONE'
+
+WARNING: Parameter 'dcm_clkgen_startup_wait' is no longer present on the upgraded IP 'pll', and cannot be set to 'false'
+
+WARNING: Parameter 'dcm_clkout_phase_shift' is no longer present on the upgraded IP 'pll', and cannot be set to 'NONE'
+
+WARNING: Parameter 'dcm_deskew_adjust' is no longer present on the upgraded IP 'pll', and cannot be set to 'SYSTEM_SYNCHRONOUS'
+
+WARNING: Parameter 'dcm_clkgen_notes' is no longer present on the upgraded IP 'pll', and cannot be set to 'None'
+
+WARNING: Parameter 'dcm_clkgen_clkfx_multiply' is no longer present on the upgraded IP 'pll', and cannot be set to '4'
+
+WARNING: Parameter 'dcm_clkgen_clkin_period' is no longer present on the upgraded IP 'pll', and cannot be set to '10.000'
+
+WARNING: Parameter 'dcm_clkgen_clkfxdv_divide' is no longer present on the upgraded IP 'pll', and cannot be set to '2'
+
+WARNING: Parameter 'dcm_clkfx_multiply' is no longer present on the upgraded IP 'pll', and cannot be set to '4'
+
+WARNING: Parameter 'dcm_clkfx_divide' is no longer present on the upgraded IP 'pll', and cannot be set to '1'
+
+WARNING: Parameter 'dcm_clkgen_clkfx_md_max' is no longer present on the upgraded IP 'pll', and cannot be set to '0.000'
+
+WARNING: Parameter 'dcm_clk_out5_port' is no longer present on the upgraded IP 'pll', and cannot be set to 'CLK0'
+
+WARNING: Parameter 'dcm_clkgen_clk_out3_port' is no longer present on the upgraded IP 'pll', and cannot be set to 'CLKFX'
+
+WARNING: Parameter 'dcm_clk_out2_port' is no longer present on the upgraded IP 'pll', and cannot be set to 'CLK0'
+
+WARNING: Parameter 'dcm_phase_shift' is no longer present on the upgraded IP 'pll', and cannot be set to '0'
+
+WARNING: Parameter 'dcm_clkin_divide_by_2' is no longer present on the upgraded IP 'pll', and cannot be set to 'false'
+
+WARNING: Parameter 'override_dcm_clkgen' is no longer present on the upgraded IP 'pll', and cannot be set to 'false'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  Please consult the warnings from the previous sections, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:ip:clk_wiz:5.2 -user_name pll
+set_property -dict "\
+  CONFIG.CALC_DONE DONE \
+  CONFIG.CLKFB_IN_SIGNALING SINGLE \
+  CONFIG.CLKIN1_JITTER_PS 100.0 \
+  CONFIG.CLKIN1_UI_JITTER 0.010 \
+  CONFIG.CLKIN2_JITTER_PS 100.0 \
+  CONFIG.CLKIN2_UI_JITTER 0.010 \
+  CONFIG.CLKOUT1_DRIVES BUFG \
+  CONFIG.CLKOUT1_REQUESTED_DUTY_CYCLE 50.000 \
+  CONFIG.CLKOUT1_REQUESTED_OUT_FREQ 25.000 \
+  CONFIG.CLKOUT1_REQUESTED_PHASE 0.000 \
+  CONFIG.CLKOUT2_DRIVES BUFG \
+  CONFIG.CLKOUT2_REQUESTED_DUTY_CYCLE 50.000 \
+  CONFIG.CLKOUT2_REQUESTED_OUT_FREQ 100.000 \
+  CONFIG.CLKOUT2_REQUESTED_PHASE 0.000 \
+  CONFIG.CLKOUT2_USED false \
+  CONFIG.CLKOUT3_DRIVES BUFG \
+  CONFIG.CLKOUT3_REQUESTED_DUTY_CYCLE 50.000 \
+  CONFIG.CLKOUT3_REQUESTED_OUT_FREQ 100.000 \
+  CONFIG.CLKOUT3_REQUESTED_PHASE 0.000 \
+  CONFIG.CLKOUT3_USED false \
+  CONFIG.CLKOUT4_DRIVES BUFG \
+  CONFIG.CLKOUT4_REQUESTED_DUTY_CYCLE 50.000 \
+  CONFIG.CLKOUT4_REQUESTED_OUT_FREQ 100.000 \
+  CONFIG.CLKOUT4_REQUESTED_PHASE 0.000 \
+  CONFIG.CLKOUT4_USED false \
+  CONFIG.CLKOUT5_DRIVES BUFG \
+  CONFIG.CLKOUT5_REQUESTED_DUTY_CYCLE 50.000 \
+  CONFIG.CLKOUT5_REQUESTED_OUT_FREQ 100.000 \
+  CONFIG.CLKOUT5_REQUESTED_PHASE 0.000 \
+  CONFIG.CLKOUT5_USED false \
+  CONFIG.CLKOUT6_DRIVES BUFG \
+  CONFIG.CLKOUT6_REQUESTED_DUTY_CYCLE 50.000 \
+  CONFIG.CLKOUT6_REQUESTED_OUT_FREQ 100.000 \
+  CONFIG.CLKOUT6_REQUESTED_PHASE 0.000 \
+  CONFIG.CLKOUT6_USED false \
+  CONFIG.CLKOUT7_DRIVES BUFG \
+  CONFIG.CLKOUT7_REQUESTED_DUTY_CYCLE 50.000 \
+  CONFIG.CLKOUT7_REQUESTED_OUT_FREQ 100.000 \
+  CONFIG.CLKOUT7_REQUESTED_PHASE 0.000 \
+  CONFIG.CLKOUT7_USED false \
+  CONFIG.CLK_OUT1_USE_FINE_PS_GUI false \
+  CONFIG.CLK_OUT2_USE_FINE_PS_GUI false \
+  CONFIG.CLK_OUT3_USE_FINE_PS_GUI false \
+  CONFIG.CLK_OUT4_USE_FINE_PS_GUI false \
+  CONFIG.CLK_OUT5_USE_FINE_PS_GUI false \
+  CONFIG.CLK_OUT6_USE_FINE_PS_GUI false \
+  CONFIG.CLK_OUT7_USE_FINE_PS_GUI false \
+  CONFIG.CLOCK_MGR_TYPE AUTO \
+  CONFIG.Component_Name pll \
+  CONFIG.FEEDBACK_SOURCE FDBK_AUTO \
+  CONFIG.IN_FREQ_UNITS Units_MHz \
+  CONFIG.IN_JITTER_UNITS Units_UI \
+  CONFIG.JITTER_OPTIONS UI \
+  CONFIG.JITTER_SEL No_Jitter \
+  CONFIG.MMCM_BANDWIDTH OPTIMIZED \
+  CONFIG.MMCM_CLKFBOUT_MULT_F 4.000 \
+  CONFIG.MMCM_CLKFBOUT_PHASE 0.000 \
+  CONFIG.MMCM_CLKFBOUT_USE_FINE_PS false \
+  CONFIG.MMCM_CLKIN1_PERIOD 10.000 \
+  CONFIG.MMCM_CLKIN2_PERIOD 10.000 \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F 4.000 \
+  CONFIG.MMCM_CLKOUT0_DUTY_CYCLE 0.500 \
+  CONFIG.MMCM_CLKOUT0_PHASE 0.000 \
+  CONFIG.MMCM_CLKOUT0_USE_FINE_PS false \
+  CONFIG.MMCM_CLKOUT1_DIVIDE 1 \
+  CONFIG.MMCM_CLKOUT1_DUTY_CYCLE 0.500 \
+  CONFIG.MMCM_CLKOUT1_PHASE 0.000 \
+  CONFIG.MMCM_CLKOUT1_USE_FINE_PS false \
+  CONFIG.MMCM_CLKOUT2_DIVIDE 1 \
+  CONFIG.MMCM_CLKOUT2_DUTY_CYCLE 0.500 \
+  CONFIG.MMCM_CLKOUT2_PHASE 0.000 \
+  CONFIG.MMCM_CLKOUT2_USE_FINE_PS false \
+  CONFIG.MMCM_CLKOUT3_DIVIDE 1 \
+  CONFIG.MMCM_CLKOUT3_DUTY_CYCLE 0.500 \
+  CONFIG.MMCM_CLKOUT3_PHASE 0.000 \
+  CONFIG.MMCM_CLKOUT3_USE_FINE_PS false \
+  CONFIG.MMCM_CLKOUT4_CASCADE false \
+  CONFIG.MMCM_CLKOUT4_DIVIDE 1 \
+  CONFIG.MMCM_CLKOUT4_DUTY_CYCLE 0.500 \
+  CONFIG.MMCM_CLKOUT4_PHASE 0.000 \
+  CONFIG.MMCM_CLKOUT4_USE_FINE_PS false \
+  CONFIG.MMCM_CLKOUT5_DIVIDE 1 \
+  CONFIG.MMCM_CLKOUT5_DUTY_CYCLE 0.500 \
+  CONFIG.MMCM_CLKOUT5_PHASE 0.000 \
+  CONFIG.MMCM_CLKOUT5_USE_FINE_PS false \
+  CONFIG.MMCM_CLKOUT6_DIVIDE 1 \
+  CONFIG.MMCM_CLKOUT6_DUTY_CYCLE 0.500 \
+  CONFIG.MMCM_CLKOUT6_PHASE 0.000 \
+  CONFIG.MMCM_CLKOUT6_USE_FINE_PS false \
+  CONFIG.MMCM_CLOCK_HOLD false \
+  CONFIG.MMCM_COMPENSATION ZHOLD \
+  CONFIG.MMCM_DIVCLK_DIVIDE 1 \
+  CONFIG.MMCM_NOTES None \
+  CONFIG.MMCM_REF_JITTER1 0.010 \
+  CONFIG.MMCM_REF_JITTER2 0.010 \
+  CONFIG.MMCM_STARTUP_WAIT false \
+  CONFIG.NUM_OUT_CLKS 1 \
+  CONFIG.OVERRIDE_MMCM false \
+  CONFIG.OVERRIDE_PLL false \
+  CONFIG.PLATFORM nt \
+  CONFIG.PLL_BANDWIDTH OPTIMIZED \
+  CONFIG.PLL_CLKFBOUT_MULT 4 \
+  CONFIG.PLL_CLKFBOUT_PHASE 0.000 \
+  CONFIG.PLL_CLKIN_PERIOD 10.000 \
+  CONFIG.PLL_CLKOUT0_DIVIDE 128 \
+  CONFIG.PLL_CLKOUT0_DUTY_CYCLE 0.500 \
+  CONFIG.PLL_CLKOUT0_PHASE 0.000 \
+  CONFIG.PLL_CLKOUT1_DIVIDE 1 \
+  CONFIG.PLL_CLKOUT1_DUTY_CYCLE 0.500 \
+  CONFIG.PLL_CLKOUT1_PHASE 0.000 \
+  CONFIG.PLL_CLKOUT2_DIVIDE 1 \
+  CONFIG.PLL_CLKOUT2_DUTY_CYCLE 0.500 \
+  CONFIG.PLL_CLKOUT2_PHASE 0.000 \
+  CONFIG.PLL_CLKOUT3_DIVIDE 1 \
+  CONFIG.PLL_CLKOUT3_DUTY_CYCLE 0.500 \
+  CONFIG.PLL_CLKOUT3_PHASE 0.000 \
+  CONFIG.PLL_CLKOUT4_DIVIDE 1 \
+  CONFIG.PLL_CLKOUT4_DUTY_CYCLE 0.500 \
+  CONFIG.PLL_CLKOUT4_PHASE 0.000 \
+  CONFIG.PLL_CLKOUT5_DIVIDE 1 \
+  CONFIG.PLL_CLKOUT5_DUTY_CYCLE 0.500 \
+  CONFIG.PLL_CLKOUT5_PHASE 0.000 \
+  CONFIG.PLL_CLK_FEEDBACK CLKFBOUT \
+  CONFIG.PLL_COMPENSATION SYSTEM_SYNCHRONOUS \
+  CONFIG.PLL_DIVCLK_DIVIDE 1 \
+  CONFIG.PLL_NOTES None \
+  CONFIG.PLL_REF_JITTER 0.010 \
+  CONFIG.PRIMTYPE_SEL PLL_BASE \
+  CONFIG.PRIM_IN_FREQ 100.000 \
+  CONFIG.PRIM_IN_JITTER 0.010 \
+  CONFIG.PRIM_SOURCE Single_ended_clock_capable_pin \
+  CONFIG.RELATIVE_INCLK REL_PRIMARY \
+  CONFIG.SECONDARY_IN_FREQ 100.000 \
+  CONFIG.SECONDARY_IN_JITTER 0.010 \
+  CONFIG.SECONDARY_SOURCE Single_ended_clock_capable_pin \
+  CONFIG.SUMMARY_STRINGS empty \
+  CONFIG.USE_CLK_VALID false \
+  CONFIG.USE_DYN_PHASE_SHIFT false \
+  CONFIG.USE_DYN_RECONFIG false \
+  CONFIG.USE_FREEZE false \
+  CONFIG.USE_FREQ_SYNTH true \
+  CONFIG.USE_INCLK_STOPPED false \
+  CONFIG.USE_INCLK_SWITCHOVER false \
+  CONFIG.USE_LOCKED false \
+  CONFIG.USE_MAX_I_JITTER false \
+  CONFIG.USE_MIN_O_JITTER false \
+  CONFIG.USE_MIN_POWER false \
+  CONFIG.USE_PHASE_ALIGNMENT true \
+  CONFIG.USE_POWER_DOWN false \
+  CONFIG.USE_RESET false \
+  CONFIG.USE_SPREAD_SPECTRUM false \
+  CONFIG.USE_STATUS false " [get_ips pll]
+
+
